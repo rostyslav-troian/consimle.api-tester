@@ -55,8 +55,8 @@ namespace HttpClientTestTask
             using(HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://tester.consimple.pro");
-                //client.DefaultRequestHeaders.Accept.Clear();
-                //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 while (ShowConsoleMenu()) 
                 {
                     Console.WriteLine("Process is started!");
